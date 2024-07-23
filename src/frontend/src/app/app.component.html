@@ -1,0 +1,23 @@
+<div class="body">
+  <mat-card appearance="raised">
+    <mat-card-header>
+      <mat-card-title> Revisor 3000</mat-card-title>
+      <mat-card-subtitle> Por Felipe Reyes Gonzalez</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <br>
+  <mat-card appearance="raised">
+    <mat-card-header>
+      <mat-card-title> Archivo Python</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form action="">
+
+          {{fileName || "No se han adjuntado archivos"}}
+          <button (click)="fileInput" color="primary" type="button" mat-raised-button><mat-icon>attach_file</mat-icon></button>
+          <input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file">
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
